@@ -15,6 +15,17 @@
 # It's ok if you do not complete all the functions, and there
 # are some additional functions to try in string2.py.
 
+'''Suggestions to look at
+def fix_start:
+  return s[0] + s[1:].replace(s[0], '*')
+
+simpler
+mix_up ... method and variable name is the same..
+
+
+'Number of donuts: %s' % ('many' if count >= 10 else count)
+'''
+
 
 # A. donuts
 # Given an int count of a number of donuts, return a string
