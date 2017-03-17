@@ -15,17 +15,6 @@
 # It's ok if you do not complete all the functions, and there
 # are some additional functions to try in string2.py.
 
-'''Suggestions to look at
-def fix_start:
-  return s[0] + s[1:].replace(s[0], '*')
-
-simpler
-mix_up ... method and variable name is the same..
-
-
-'Number of donuts: %s' % ('many' if count >= 10 else count)
-'''
-
 
 # A. donuts
 # Given an int count of a number of donuts, return a string
@@ -38,7 +27,7 @@ def donuts(count):
   # +++your code here+++
   if count >= 10:
     count = 'many'
-  return 'Number of donuts: %s' % count
+  return 'Number of donuts: %s' % ('many' if count >= 10 else count)
 
 
 # B. both_ends
@@ -66,9 +55,7 @@ def both_ends(s):
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
   # +++your code here+++
-  s_change_starts = s.replace(s[0], '*')
-  s_recover_start = s[0] + s_change_starts[1:]
-  return s_recover_start
+  return s[0] + s[1:].replace(s[0], '*')
 
 
 # D. MixUp
@@ -80,8 +67,8 @@ def fix_start(s):
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
   # +++your code here+++
-  mix_up = b[:2] + a[2:] + ' ' + a[:2] + b[2:]
-  return mix_up
+  mixed_up = b[:2] + a[2:] + ' ' + a[:2] + b[2:]
+  return mixed_up
 
 
 # Provided simple test() function used in main() to print
