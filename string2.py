@@ -17,12 +17,11 @@
 # Return the resulting string.
 def verbing(s):
   # +++your code here+++
+  #mchen - favour early returns to get edge cases out of the way and improve readability 
   if len(s) < 3:
     return s
-
   if s.endswith('ing'):
     return s + 'ly'
-
   return s + 'ing'
 
 # E. not_bad
@@ -35,6 +34,8 @@ def verbing(s):
 # This dinner is good!
 def not_bad(s):
   # +++your code here+++
+  #mchen - favour early returns to get edge cases out of the way and improve readability
+  # used index instead of find to cause error and return early
   try:
     index_not = s.index('not')
     index_bad = s.index('bad')
